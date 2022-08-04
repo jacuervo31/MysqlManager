@@ -1,5 +1,5 @@
 {
-    "name": "julia/mysql-manager",
+    "name": "crowdev/mysql-manager",
     "description": "Library for use MySQL databases in PHP",
     "type": "library",
     "license": "MIT",
