@@ -148,7 +148,6 @@ class MysqlBuilder implements QueryBuilder
         }
 
         $sql .= ";";
-        echo $sql;
         return ["SQL" => $sql, "bindParams" => $bindParams];
     }
 }
