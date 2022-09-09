@@ -8,18 +8,13 @@ use PDOException;
 class DataBase{
 
     private PDO|FALSE $COM;
-    private array $errors = [];
+    protected array $errors = [];
     public MysqlBuilder $queryBuilding;
-    public $result = [];
+    public array $result;
 
     private function errorTracker(string $msg_error): void
     {
-        $error = [
-            "error" => "Error en la base de Datos",
-            "reason" => $msg_error,
-            "code" => 500
-
-        ];
+        $error = [$msg_error];
         $this->errors[] = $error;
     }
 
