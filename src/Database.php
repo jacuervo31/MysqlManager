@@ -8,14 +8,14 @@ use PDOException;
 class DataBase{
 
     private PDO|FALSE $COM;
-    protected array $errors = [];
+    protected array $errors;
     public MysqlBuilder $queryBuilding;
     public array $result;
 
     private function errorTracker(string $msg_error): void
     {
         $error = [$msg_error];
-        $this->errors[] = $error;
+        array_push($this->errors,$error);
     }
 
     public function getErrors(): array
