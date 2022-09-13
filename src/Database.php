@@ -8,7 +8,7 @@ use PDOException;
 class DataBase{
 
     private PDO|FALSE $COM;
-    protected array $errors;
+    protected array $errors = [];
     public MysqlBuilder $queryBuilding;
     public array $result;
 
