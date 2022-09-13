@@ -14,8 +14,7 @@ class DataBase{
 
     private function errorTracker(string $msg_error): void
     {
-        $error = [$msg_error];
-        array_push($this->errors,$error);
+        array_push($this->errors,$msg_error);
     }
 
     public function getErrors(): array
